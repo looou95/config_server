@@ -6,7 +6,14 @@ server:
 spring:
   application:
     name: order
-
+    
+eureka:
+ instance:
+   hostname: order01
+  client:
+   service-url:
+     defaultZone: http://localhost:8761/eureka/
+     
 PRODUCT:
   ribbon:
     #NFLoadBalancerRuleClassName: cn.cdqf.order.ribbon.MyIRule
